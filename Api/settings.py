@@ -181,6 +181,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8000',
     'http://localhost:4200',
+    'https://abdul-matin.web.app/',
 
 )
 
