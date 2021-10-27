@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'Api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'matinsir',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dd45bdhb18dte6',
+        'USER': 'ksuqczgnpmqkgu',
+        'PASSWORD': 'b40053295909472e39272f3423408a3e438307ed3e5ec00c2edcd903dcf96275',
+        'HOST': 'ec2-34-205-217-14.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 
@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 from datetime import timedelta
-
+import django_heroku
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -156,6 +156,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
+
 
 DJOSER = {
     'LOGIN_FIELD': 'email',
